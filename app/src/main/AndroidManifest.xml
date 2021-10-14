@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Women_saftey">
         <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".SignIn"
+            android:exported="false" />
+        <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true"
             android:label="@string/title_activity_login" />
