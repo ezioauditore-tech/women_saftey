@@ -1,8 +1,5 @@
 package com.example.women_saftey;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -71,7 +71,13 @@ public class SignUp extends AppCompatActivity {
             number.setError("Number can't be empty");
             number.requestFocus();
         }
-        else{
+        else if(Password!=Repassword)
+        {
+            repassword.setError("Not Same ");
+            password.requestFocus();
+        }
+        else
+            {
             mAuth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
