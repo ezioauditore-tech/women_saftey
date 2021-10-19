@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".Splash_Screen">
 
+    <ImageView
+        android:id="@+id/girlVector"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/girl_vector"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/girlVector"
+        android:layout_centerHorizontal="true"
+        android:text="Feel Safe"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/girlVector" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

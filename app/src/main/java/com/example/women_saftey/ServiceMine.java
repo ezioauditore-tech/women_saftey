@@ -86,7 +86,7 @@ public class ServiceMine extends Service {
                 m.createNotificationChannel(channel);
                 Notification notification = new Notification.Builder(this, "MYID")
                         .setContentTitle("Women Safety")
-                        .setContentText("Shake Device to Send SOS")
+                        .setContentText("Shake Device your device to help!")
                         .setContentIntent(pendingIntent)
                         .build();
                 this.startForeground(115, notification);

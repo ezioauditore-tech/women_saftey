@@ -29,6 +29,14 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user==null){
+            startActivity(new Intent(MainActivity.this,SignIn.class));
+        }
+    }
+    @Override
     protected void onResume() {
         super.onResume();
         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
@@ -37,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this,RegisterNumberActivity.class));
         }else {
             TextView textView =  findViewById(R.id.textnum);
-            textView.setText("ALert Message Will Be Sent To\n"+ENUM);
+            textView.setText("Alert Message will be sent to "+ENUM);
         }
     }
     @Override
@@ -54,14 +62,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser();
-        if (user==null){
-            startActivity(new Intent(MainActivity.this,SignIn.class));
-        }
     }
     private ActivityResultLauncher<String[]> multiplePermissions = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
         @Override
