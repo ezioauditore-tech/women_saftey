@@ -24,16 +24,15 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="182dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="84dp"
-        android:fontFamily="@font/damion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/roboto_bold_italic"
         android:text="Feel Safe"
-        android:textColor="#624A8C"
-        android:textSize="50sp"
+        android:textColor="#3B0A43"
+        android:textSize="30sp"
         android:textStyle="normal|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,5 +81,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.382" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="172dp"
+        app:layout_constraintBottom_toTopOf="@+id/textnum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/front" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
